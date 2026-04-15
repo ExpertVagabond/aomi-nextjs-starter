@@ -1,36 +1,52 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Aomi Next.js Starter
 
-## Getting Started
+A working Next.js 15 integration with the [Aomi](https://aomi.dev) shadcn chat widget.
 
-First, run the development server:
+## Quick Start
 
 ```bash
+git clone https://github.com/ExpertVagabond/aomi-nextjs-starter.git
+cd aomi-nextjs-starter
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) to see the app.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Features
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- Chat UI powered by the Aomi SDK and assistant-ui
+- Tool calling with inline results
+- SSE streaming responses
+- Model and app switcher
+- Wallet connect (via Para/wagmi)
+- Dark mode
+- Thread management
 
-## Learn More
+## Stack
 
-To learn more about Next.js, take a look at the following resources:
+- [Next.js 15](https://nextjs.org/)
+- [@aomi-labs/react](https://www.npmjs.com/package/@aomi-labs/react)
+- [@assistant-ui/react](https://www.npmjs.com/package/@assistant-ui/react)
+- [shadcn/ui](https://ui.shadcn.com/)
+- [Tailwind CSS v4](https://tailwindcss.com/)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Configuration
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+The app connects to the Aomi backend via `NEXT_PUBLIC_BACKEND_URL`. It defaults to `https://api.aomi.dev` if not set.
 
-## Deploy on Vercel
+To override, create a `.env.local` file:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```
+NEXT_PUBLIC_BACKEND_URL=https://your-backend-url.com
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+See `.env.example` for reference.
+
+## Docs
+
+- [Aomi SDK Overview](https://aomi.dev/docs/build/overview)
+
+## License
+
+MIT
